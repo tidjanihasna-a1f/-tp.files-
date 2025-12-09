@@ -1,0 +1,23 @@
+#include <stdio.h> 
+main() { int A[50]; int cp, cn, N, I; 
+ /* Data entry */ 
+ do { printf("Enter the table dimensions A(max.50): "); 
+ scanf("%d", &N );} 
+ while ((N < 1) || (N > 50)); 
+ for (I=0; I<N; I++) { 
+ printf("A[%d] : ", I); 
+ scanf("%d", &A[I]); 
+ } 
+ printf(" The elements of the Table: \n"); 
+ for (I=0; I<N; I++) 
+ printf("%d ", A[I]); printf("\n"); 
+/*Calculate the number of positive and negative elements*/ 
+ cp = 0; cn = 0; 
+ for (I=0 ; (I<N); I++) 
+ if (A[I]<0) cn++; 
+ else cp++; 
+ printf("Number of positive elements: %d \n", cp); 
+ printf("Number of negative elements: %d \n", cn); 
+ system("pause"); 
+ return 0; 
+} 
